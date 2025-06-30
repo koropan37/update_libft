@@ -6,45 +6,16 @@
 /*   By: skimura <skimura@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/04 19:26:11 by skimura           #+#    #+#             */
-/*   Updated: 2025/06/01 21:50:43 by skimura          ###   ########.fr       */
+/*   Updated: 2025/06/30 19:03:41 by skimura          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "libft.h"
 
-size_t	ft_strlen(const char *s)
-{
-	size_t	len;
-
-	if (!s)
-		return (0);
-	len = 0;
-	while (s[len])
-		len++;
-	return (len);
-}
-
-char	*ft_strdup(const char *s)
-{
-	char	*new;
-	size_t	i;
-	size_t	len;
-
-	if (!s)
-		return (NULL);
-	len = ft_strlen(s);
-	new = malloc(len + 1);
-	if (!new)
-		return (NULL);
-	i = 0;
-	while (i < len)
-	{
-		new[i] = s[i];
-		i++;
-	}
-	new[i] = '\0';
-	return (new);
-}
+int		ft_check_nl(const char *s);
+char	*ft_strjoin_free(char *old, const char *buffer);
+char	*gnl_cleanup_internal(char **files);
+char	*gnl_process_file(int fd, char **files);
 
 int	ft_check_nl(const char *s)
 {
@@ -83,29 +54,38 @@ char	*ft_strjoin_free(char *old, const char *buffer)
 	return (new);
 }
 
-
-char	*ft_substr(char const *s, size_t start, size_t len)
+char	*gnl_cleanup_internal(char **files)
 {
-	size_t	sub_len;
-	char	*substr;
-	size_t	i;
+	int	i;
 
-	if (!s)
-		return (NULL);
-	sub_len = ft_strlen(s);
-	if (start >= sub_len)
-		return (ft_strdup(""));
-	if (len > sub_len - start)
-		len = sub_len - start;
-	substr = (char *)malloc(sizeof(char) * (len + 1));
-	if (!substr)
-		return (NULL);
 	i = 0;
-	while (i < len)
+	while (i < FD_MAX)
 	{
-		substr[i] = s[i + start];
+		free(files[i]);
+		files[i] = NULL;
 		i++;
 	}
-	substr[i] = '\0';
-	return (substr);
+	return (NULL);
+}
+
+char	*gnl_process_file(int fd, char **files)
+{
+	char	*line;
+
+	files[fd] = ft_read_enter(fd, files[fd]);
+	if (!files[fd] || !*files[fd])
+	{
+		free(files[fd]);
+		files[fd] = NULL;
+		return (NULL);
+	}
+	line = ft_get_newline(files[fd]);
+	if (!line)
+	{
+		free(files[fd]);
+		files[fd] = NULL;
+		return (NULL);
+	}
+	files[fd] = ft_trim_newline(files[fd]);
+	return (line);
 }

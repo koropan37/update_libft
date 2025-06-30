@@ -1,36 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf_str.c                                    :+:      :+:    :+:   */
+/*   ft_strcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: skimura <skimura@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/16 16:25:32 by skimura           #+#    #+#             */
-/*   Updated: 2025/06/30 19:13:24 by skimura          ###   ########.fr       */
+/*   Created: 2025/06/11 19:38:37 by skimura           #+#    #+#             */
+/*   Updated: 2025/06/18 20:11:43 by skimura          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_put_c(char c)
+char	*ft_strcpy(char *dst, const char *src)
 {
-	ssize_t	bytes;
+	size_t	i;
 
-	bytes = write(1, &c, 1);
-	if (bytes == -1)
-		return (-1);
-	return ((int)bytes);
-}
-
-int	ft_put_s(char *s)
-{
-	ssize_t	bytes;
-
-	if (!s)
-		bytes = write(1, "(null)", 6);
-	else
-		bytes = write(1, s, ft_strlen(s));
-	if (bytes == -1)
-		return (-1);
-	return ((int)bytes);
+	if (!dst || !src)
+		return (NULL);
+	i = 0;
+	while (src[i])
+	{
+		dst[i] = src[i];
+		i++;
+	}
+	dst[i] = '\0';
+	return (dst);
 }

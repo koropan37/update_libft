@@ -1,36 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf_str.c                                    :+:      :+:    :+:   */
+/*   ft_min.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: skimura <skimura@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/16 16:25:32 by skimura           #+#    #+#             */
-/*   Updated: 2025/06/30 19:13:24 by skimura          ###   ########.fr       */
+/*   Created: 2025/06/03 20:22:27 by skimura           #+#    #+#             */
+/*   Updated: 2025/06/03 21:27:28 by skimura          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_put_c(char c)
+int	ft_min(int *tab, unsigned int len)
 {
-	ssize_t	bytes;
+	unsigned int	i;
+	int				min_n;
 
-	bytes = write(1, &c, 1);
-	if (bytes == -1)
-		return (-1);
-	return ((int)bytes);
+	if (len == 0)
+		return (0);
+	i = 1;
+	min_n = tab[0];
+	while (i < len)
+	{
+		if (tab[i] < min_n)
+			min_n = tab[i];
+		i++;
+	}
+	return (min_n);
 }
 
-int	ft_put_s(char *s)
-{
-	ssize_t	bytes;
+// #include <stdio.h>
 
-	if (!s)
-		bytes = write(1, "(null)", 6);
-	else
-		bytes = write(1, s, ft_strlen(s));
-	if (bytes == -1)
-		return (-1);
-	return ((int)bytes);
-}
+// int	main(void)
+// {
+// 	int	tab[] = {5, 4, 7, 9, 10};
+
+// 	printf("%d\n", min(tab, 5));
+// 	return (0);
+// }

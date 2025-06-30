@@ -1,44 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strpbrk.c                                       :+:      :+:    :+:   */
+/*   ft_max.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: skimura <skimura@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/06/02 17:46:12 by skimura           #+#    #+#             */
-/*   Updated: 2025/06/02 20:11:30 by skimura          ###   ########.fr       */
+/*   Created: 2025/06/03 20:06:26 by skimura           #+#    #+#             */
+/*   Updated: 2025/06/03 20:24:46 by skimura          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include "libft.h"
 
-char	*ft_strpbrk(const char *s1, const char *s2)
+int	ft_max(int *tab, unsigned int len)
 {
-	int	i;
-	int	j;
+	unsigned int	i;
+	int				max_n;
 
-	i = 0;
-	j = 0;
-	while (s1[i])
+	if (len == 0)
+		return (0);
+	i = 1;
+	max_n = tab[0];
+	while (i < len)
 	{
-		j = 0;
-		while (s2[j])
-		{
-			if (s1[i] == s2[j])
-				return ((char *)&s1[i]);
-			j++;
-		}
+		if (tab[i] > max_n)
+			max_n = tab[i];
 		i++;
 	}
-	return (NULL);
+	return (max_n);
 }
+
+// #include <stdio.h>
 
 // int	main(void)
 // {
-// 	const char	*s1 = "hello world";
-// 	const char	*s2 = "aiueo";
+// 	int	tab[] = {5, 4, 7, 9, 10};
 
-// 	printf("%s\n", ft_strpbrk(s1, s2));
+// 	printf("%d\n", max(tab, 5));
 // 	return (0);
 // }

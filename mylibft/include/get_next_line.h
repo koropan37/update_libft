@@ -6,7 +6,7 @@
 /*   By: skimura <skimura@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/04 19:26:15 by skimura           #+#    #+#             */
-/*   Updated: 2025/06/01 21:46:05 by skimura          ###   ########.fr       */
+/*   Updated: 2025/06/30 19:03:49 by skimura          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,10 +26,13 @@
 # include <unistd.h>
 
 char	*get_next_line(int fd);
-size_t	ft_strlen(const char *s);
-char	*ft_strdup(const char *s);
+ssize_t	ft_read_buf(int fd, char **buffer);
+char	*ft_read_enter(int fd, char *enter);
+char	*ft_get_newline(char *enter);
+char	*ft_trim_newline(char *enter);
+
 int		ft_check_nl(const char *s);
 char	*ft_strjoin_free(char *old, const char *buffer);
-char	*ft_substr(const char *s, size_t start, size_t len);
-
+char	*gnl_cleanup_internal(char **files);
+char	*gnl_process_file(int fd, char **files);
 #endif

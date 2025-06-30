@@ -1,44 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_swap_bits.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: skimura <skimura@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/26 10:47:24 by skimura           #+#    #+#             */
-/*   Updated: 2025/06/28 14:33:04 by skimura          ###   ########.fr       */
+/*   Created: 2025/06/04 20:01:29 by skimura           #+#    #+#             */
+/*   Updated: 2025/06/04 21:21:51 by skimura          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(const char *s)
+unsigned char	ft_swap_bits(unsigned char octet)
 {
-	size_t	len;
-	char	*str;
-
-	if (!s)
-		return (NULL);
-	len = ft_strlen(s);
-	str = (char *)malloc(sizeof(char) * (len + 1));
-	if (!str)
-		return (NULL);
-	ft_strlcpy(str, s, len + 1);
-	return (str);
+	return ((octet >> 4) | (octet << 4));
 }
 
+// #include <unistd.h>
+
+// void	print_bits(unsigned char octet)
+// {
+// 	int				i;
+// 	unsigned char	bit;
+
+// 	i = 8;
+// 	while (i--)
+// 	{
+// 		bit = ((octet >> i) & 1) + '0';
+// 		write(1, &bit, 1);
+// 	}
+// }
+
 // #include <stdio.h>
-// #include <string.h>
 
 // int	main(void)
 // {
-// 	char	s[] = "world";
-// 	char	*s2 = ft_strdup(s);
-// 	char	*s3 = strdup(s);
+// 	unsigned char	x;
 
-// 	printf("%s %s\n", s, s2);
-// 	printf("%s %s\n", s, s3);
-// 	free(s2);
-// 	free(s3);
+// 	x = swap_bits((unsigned char)2);
+// 	print_bits(x);
 // 	return (0);
 // }

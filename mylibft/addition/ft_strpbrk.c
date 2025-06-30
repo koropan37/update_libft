@@ -1,36 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf_str.c                                    :+:      :+:    :+:   */
+/*   ft_strpbrk.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: skimura <skimura@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/16 16:25:32 by skimura           #+#    #+#             */
-/*   Updated: 2025/06/30 19:13:24 by skimura          ###   ########.fr       */
+/*   Created: 2025/06/02 17:46:12 by skimura           #+#    #+#             */
+/*   Updated: 2025/06/04 21:22:38 by skimura          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_put_c(char c)
+char	*ft_strpbrk(const char *s1, const char *s2)
 {
-	ssize_t	bytes;
+	int	i;
+	int	j;
 
-	bytes = write(1, &c, 1);
-	if (bytes == -1)
-		return (-1);
-	return ((int)bytes);
+	i = 0;
+	j = 0;
+	while (s1[i])
+	{
+		j = 0;
+		while (s2[j])
+		{
+			if (s1[i] == s2[j])
+				return ((char *)&s1[i]);
+			j++;
+		}
+		i++;
+	}
+	return (NULL);
 }
 
-int	ft_put_s(char *s)
-{
-	ssize_t	bytes;
+// int	main(void)
+// {
+// 	const char	*s1 = "hello world";
+// 	const char	*s2 = "aiueo";
 
-	if (!s)
-		bytes = write(1, "(null)", 6);
-	else
-		bytes = write(1, s, ft_strlen(s));
-	if (bytes == -1)
-		return (-1);
-	return ((int)bytes);
-}
+// 	printf("%s\n", ft_strpbrk(s1, s2));
+// 	return (0);
+// }

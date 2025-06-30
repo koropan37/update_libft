@@ -1,36 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf_str.c                                    :+:      :+:    :+:   */
+/*   ft_lcm.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: skimura <skimura@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/16 16:25:32 by skimura           #+#    #+#             */
-/*   Updated: 2025/06/30 19:13:24 by skimura          ###   ########.fr       */
+/*   Created: 2025/06/05 19:41:36 by skimura           #+#    #+#             */
+/*   Updated: 2025/06/05 19:43:21 by skimura          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_put_c(char c)
+unsigned int	ft_lcm(unsigned int a, unsigned int b)
 {
-	ssize_t	bytes;
-
-	bytes = write(1, &c, 1);
-	if (bytes == -1)
-		return (-1);
-	return ((int)bytes);
-}
-
-int	ft_put_s(char *s)
-{
-	ssize_t	bytes;
-
-	if (!s)
-		bytes = write(1, "(null)", 6);
-	else
-		bytes = write(1, s, ft_strlen(s));
-	if (bytes == -1)
-		return (-1);
-	return ((int)bytes);
+	if (a == 0 || b == 0)
+		return (0);
+	return (a / ft_gcd(a, b) * b);
 }
