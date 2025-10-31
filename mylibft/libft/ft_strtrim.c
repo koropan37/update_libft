@@ -6,11 +6,11 @@
 /*   By: skimura <skimura@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/29 15:55:34 by skimura           #+#    #+#             */
-/*   Updated: 2025/05/02 21:30:01 by skimura          ###   ########.fr       */
+/*   Updated: 2025/07/23 22:09:36 by skimura          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../include/libft.h"
 
 static int	check_set(char c, const char *set)
 {

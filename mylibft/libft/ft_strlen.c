@@ -6,11 +6,11 @@
 /*   By: skimura <skimura@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/26 10:39:19 by skimura           #+#    #+#             */
-/*   Updated: 2025/05/01 17:20:31 by skimura          ###   ########.fr       */
+/*   Updated: 2025/07/23 22:10:01 by skimura          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../include/libft.h"
 
 size_t	ft_strlen(const char *s)
 {

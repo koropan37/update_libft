@@ -6,11 +6,11 @@
 /*   By: skimura <skimura@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/29 15:56:43 by skimura           #+#    #+#             */
-/*   Updated: 2025/05/01 17:59:48 by skimura          ###   ########.fr       */
+/*   Updated: 2025/07/23 22:09:01 by skimura          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../include/libft.h"
 
 void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {

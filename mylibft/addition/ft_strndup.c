@@ -6,11 +6,11 @@
 /*   By: skimura <skimura@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/11 20:07:23 by skimura           #+#    #+#             */
-/*   Updated: 2025/06/18 20:12:15 by skimura          ###   ########.fr       */
+/*   Updated: 2025/07/23 22:03:35 by skimura          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../include/libft.h"
 
 char	*ft_strndup(const char *s, size_t n)
 {

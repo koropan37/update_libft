@@ -6,11 +6,11 @@
 /*   By: skimura <skimura@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/04 20:01:29 by skimura           #+#    #+#             */
-/*   Updated: 2025/06/04 21:21:51 by skimura          ###   ########.fr       */
+/*   Updated: 2025/07/23 22:05:35 by skimura          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../include/libft.h"
 
 unsigned char	ft_swap_bits(unsigned char octet)
 {

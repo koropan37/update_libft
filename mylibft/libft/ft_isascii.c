@@ -6,11 +6,11 @@
 /*   By: skimura <skimura@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/26 12:10:05 by skimura           #+#    #+#             */
-/*   Updated: 2025/05/05 13:14:44 by skimura          ###   ########.fr       */
+/*   Updated: 2025/07/23 19:31:07 by skimura          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../include/libft.h"
 
 int	ft_isascii(int c)
 {

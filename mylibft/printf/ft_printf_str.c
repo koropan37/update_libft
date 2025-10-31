@@ -6,11 +6,11 @@
 /*   By: skimura <skimura@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/16 16:25:32 by skimura           #+#    #+#             */
-/*   Updated: 2025/06/30 19:13:24 by skimura          ###   ########.fr       */
+/*   Updated: 2025/07/23 22:00:58 by skimura          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../include/libft.h"
 
 int	ft_put_c(char c)
 {

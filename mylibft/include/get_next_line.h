@@ -6,7 +6,7 @@
 /*   By: skimura <skimura@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/04 19:26:15 by skimura           #+#    #+#             */
-/*   Updated: 2025/06/30 19:03:49 by skimura          ###   ########.fr       */
+/*   Updated: 2025/10/20 22:21:01 by skimura          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,4 +35,11 @@ int		ft_check_nl(const char *s);
 char	*ft_strjoin_free(char *old, const char *buffer);
 char	*gnl_cleanup_internal(char **files);
 char	*gnl_process_file(int fd, char **files);
+// gnu
+char	*get_next_until(int fd, const char *sep);
+char	*ft_get_until(const char *s, const char *nl);
+char	*ft_trim_until(char *s, const char *nl);
+char	*ft_read_until(int fd, char *enter, const char *sep);
+char	*ft_find_substr(const char *s, const char *sep);
+void	free_and_null(void **p);
 #endif

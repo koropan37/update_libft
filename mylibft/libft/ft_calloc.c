@@ -6,11 +6,11 @@
 /*   By: skimura <skimura@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/26 10:47:05 by skimura           #+#    #+#             */
-/*   Updated: 2025/06/06 17:55:03 by skimura          ###   ########.fr       */
+/*   Updated: 2025/07/23 19:30:50 by skimura          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../include/libft.h"
 
 void	*ft_calloc(size_t nmemb, size_t size)
 {

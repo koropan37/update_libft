@@ -6,11 +6,11 @@
 /*   By: skimura <skimura@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/03 20:06:26 by skimura           #+#    #+#             */
-/*   Updated: 2025/06/03 20:24:46 by skimura          ###   ########.fr       */
+/*   Updated: 2025/07/23 22:03:37 by skimura          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../include/libft.h"
 
 int	ft_max(int *tab, unsigned int len)
 {

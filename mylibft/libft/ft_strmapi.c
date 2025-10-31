@@ -6,11 +6,11 @@
 /*   By: skimura <skimura@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/29 15:56:30 by skimura           #+#    #+#             */
-/*   Updated: 2025/05/02 21:30:17 by skimura          ###   ########.fr       */
+/*   Updated: 2025/10/13 21:45:08 by skimura          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../include/libft.h"
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
@@ -21,7 +21,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	if (!s || !f)
 		return (NULL);
 	len = ft_strlen(s);
-	str = (char *)malloc(sizeof(char) * (len + 1));
+	str = (char *)ft_calloc((len + 1), sizeof(char));
 	if (!str)
 		return (NULL);
 	i = 0;
@@ -54,5 +54,5 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 // 		printf("%s\n", s2);
 // 		free(s2);
 // 	}
-// 	return 0;
+// 	return (0);
 // }

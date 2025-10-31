@@ -6,11 +6,11 @@
 /*   By: skimura <skimura@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/18 18:12:10 by skimura           #+#    #+#             */
-/*   Updated: 2025/06/18 20:21:32 by skimura          ###   ########.fr       */
+/*   Updated: 2025/07/23 22:01:00 by skimura          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../include/libft.h"
 
 void	*ft_realloc(void *ptr, size_t old_size, size_t new_size)
 {

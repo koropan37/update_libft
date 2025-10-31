@@ -6,11 +6,11 @@
 /*   By: skimura <skimura@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/16 21:37:29 by skimura           #+#    #+#             */
-/*   Updated: 2025/06/27 15:39:34 by skimura          ###   ########.fr       */
+/*   Updated: 2025/07/23 22:00:59 by skimura          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../include/libft.h"
 
 int	ft_unsigned_nbr_base(unsigned long long n, int base, const char *digits)
 {

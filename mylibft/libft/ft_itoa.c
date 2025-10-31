@@ -6,11 +6,11 @@
 /*   By: skimura <skimura@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/29 15:56:12 by skimura           #+#    #+#             */
-/*   Updated: 2025/06/06 17:06:07 by skimura          ###   ########.fr       */
+/*   Updated: 2025/07/23 19:31:18 by skimura          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../include/libft.h"
 
 static int	int_len(int n)
 {

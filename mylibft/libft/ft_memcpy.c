@@ -6,11 +6,11 @@
 /*   By: skimura <skimura@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/26 10:40:03 by skimura           #+#    #+#             */
-/*   Updated: 2025/05/03 13:15:39 by skimura          ###   ########.fr       */
+/*   Updated: 2025/07/23 22:06:58 by skimura          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../include/libft.h"
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {

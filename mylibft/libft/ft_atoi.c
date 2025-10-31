@@ -6,11 +6,11 @@
 /*   By: skimura <skimura@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/26 10:46:49 by skimura           #+#    #+#             */
-/*   Updated: 2025/05/05 13:38:00 by skimura          ###   ########.fr       */
+/*   Updated: 2025/07/23 19:30:43 by skimura          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../include/libft.h"
 
 static int	overflow(int sign)
 {

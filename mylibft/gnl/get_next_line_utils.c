@@ -6,11 +6,11 @@
 /*   By: skimura <skimura@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/04 19:26:11 by skimura           #+#    #+#             */
-/*   Updated: 2025/06/30 19:03:41 by skimura          ###   ########.fr       */
+/*   Updated: 2025/07/23 22:00:59 by skimura          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../include/libft.h"
 
 int		ft_check_nl(const char *s);
 char	*ft_strjoin_free(char *old, const char *buffer);

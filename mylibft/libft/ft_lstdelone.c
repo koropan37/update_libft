@@ -6,11 +6,11 @@
 /*   By: skimura <skimura@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/01 20:08:10 by skimura           #+#    #+#             */
-/*   Updated: 2025/05/02 20:55:57 by skimura          ###   ########.fr       */
+/*   Updated: 2025/07/23 20:53:23 by skimura          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../include/libft.h"
 
 void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {

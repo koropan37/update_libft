@@ -6,11 +6,11 @@
 /*   By: skimura <skimura@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/05 19:41:36 by skimura           #+#    #+#             */
-/*   Updated: 2025/06/05 19:43:21 by skimura          ###   ########.fr       */
+/*   Updated: 2025/07/23 22:03:37 by skimura          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../include/libft.h"
 
 unsigned int	ft_lcm(unsigned int a, unsigned int b)
 {

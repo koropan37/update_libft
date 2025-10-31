@@ -6,9 +6,11 @@
 /*   By: skimura <skimura@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/11 20:02:53 by skimura           #+#    #+#             */
-/*   Updated: 2025/06/11 20:03:36 by skimura          ###   ########.fr       */
+/*   Updated: 2025/07/23 22:04:35 by skimura          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "../include/libft.h"
 
 int	ft_abs(int n)
 {

@@ -6,11 +6,11 @@
 /*   By: skimura <skimura@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/26 10:37:36 by skimura           #+#    #+#             */
-/*   Updated: 2025/05/05 13:16:07 by skimura          ###   ########.fr       */
+/*   Updated: 2025/07/23 19:31:00 by skimura          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../include/libft.h"
 
 int	ft_isalnum(int c)
 {

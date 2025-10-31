@@ -6,11 +6,11 @@
 /*   By: skimura <skimura@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/29 15:56:05 by skimura           #+#    #+#             */
-/*   Updated: 2025/06/25 21:56:48 by skimura          ###   ########.fr       */
+/*   Updated: 2025/10/13 21:44:27 by skimura          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../include/libft.h"
 
 static int	count_words(char const *s, char c)
 {
@@ -40,7 +40,7 @@ static char	*word_stock(char const *start, size_t len)
 	char	*word;
 	size_t	i;
 
-	word = (char *)malloc(sizeof(char) * (len + 1));
+	word = ft_calloc((len + 1), sizeof(char));
 	if (word == NULL)
 		return (NULL);
 	i = 0;
@@ -97,7 +97,7 @@ char	**ft_split(char const *s, char c)
 	if (!s)
 		return (NULL);
 	word_total = count_words(s, c);
-	newstr = (char **)malloc(sizeof(char *) * (word_total + 1));
+	newstr = (char **)ft_calloc((word_total + 1), sizeof(char *));
 	if (!newstr)
 		return (NULL);
 	if (!in_split(newstr, s, c, word_total))

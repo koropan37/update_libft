@@ -6,11 +6,11 @@
 /*   By: skimura <skimura@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/02 17:46:12 by skimura           #+#    #+#             */
-/*   Updated: 2025/06/04 21:22:38 by skimura          ###   ########.fr       */
+/*   Updated: 2025/07/23 22:05:27 by skimura          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../include/libft.h"
 
 char	*ft_strpbrk(const char *s1, const char *s2)
 {

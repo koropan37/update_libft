@@ -6,11 +6,11 @@
 /*   By: skimura <skimura@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/26 10:39:16 by skimura           #+#    #+#             */
-/*   Updated: 2025/05/03 14:59:29 by skimura          ###   ########.fr       */
+/*   Updated: 2025/07/23 22:07:07 by skimura          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../include/libft.h"
 
 void	*ft_memset(void *s, int c, size_t n)
 {

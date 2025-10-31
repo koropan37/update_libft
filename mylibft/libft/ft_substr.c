@@ -6,11 +6,11 @@
 /*   By: skimura <skimura@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/29 15:49:23 by skimura           #+#    #+#             */
-/*   Updated: 2025/06/01 21:47:28 by skimura          ###   ########.fr       */
+/*   Updated: 2025/10/13 21:45:23 by skimura          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../include/libft.h"
 
 char	*ft_substr(char const *s, size_t start, size_t len)
 {
@@ -25,7 +25,7 @@ char	*ft_substr(char const *s, size_t start, size_t len)
 		return (ft_strdup(""));
 	if (len > sub_len - start)
 		len = sub_len - start;
-	substr = (char *)malloc(sizeof(char) * (len + 1));
+	substr = ft_calloc((len + 1), sizeof(char));
 	if (!substr)
 		return (NULL);
 	i = 0;

@@ -6,11 +6,11 @@
 /*   By: skimura <skimura@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/03 20:22:27 by skimura           #+#    #+#             */
-/*   Updated: 2025/06/03 21:27:28 by skimura          ###   ########.fr       */
+/*   Updated: 2025/07/23 22:04:56 by skimura          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../include/libft.h"
 
 int	ft_min(int *tab, unsigned int len)
 {

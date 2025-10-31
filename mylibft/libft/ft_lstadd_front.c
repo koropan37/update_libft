@@ -6,11 +6,11 @@
 /*   By: skimura <skimura@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/01 20:00:12 by skimura           #+#    #+#             */
-/*   Updated: 2025/05/02 14:04:39 by skimura          ###   ########.fr       */
+/*   Updated: 2025/07/23 19:31:26 by skimura          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../include/libft.h"
 
 void	ft_lstadd_front(t_list **lst, t_list *new)
 {

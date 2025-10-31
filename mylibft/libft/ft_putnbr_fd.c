@@ -6,11 +6,11 @@
 /*   By: skimura <skimura@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/29 15:57:47 by skimura           #+#    #+#             */
-/*   Updated: 2025/05/03 13:33:40 by skimura          ###   ########.fr       */
+/*   Updated: 2025/07/23 22:08:41 by skimura          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../include/libft.h"
 
 void	ft_putnbr_fd(int n, int fd)
 {

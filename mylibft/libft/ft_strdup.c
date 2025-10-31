@@ -6,11 +6,11 @@
 /*   By: skimura <skimura@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/26 10:47:24 by skimura           #+#    #+#             */
-/*   Updated: 2025/06/28 14:33:04 by skimura          ###   ########.fr       */
+/*   Updated: 2025/10/13 21:44:47 by skimura          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../include/libft.h"
 
 char	*ft_strdup(const char *s)
 {
@@ -20,7 +20,7 @@ char	*ft_strdup(const char *s)
 	if (!s)
 		return (NULL);
 	len = ft_strlen(s);
-	str = (char *)malloc(sizeof(char) * (len + 1));
+	str = ft_calloc((len + 1), sizeof(char));
 	if (!str)
 		return (NULL);
 	ft_strlcpy(str, s, len + 1);

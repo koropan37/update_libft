@@ -6,33 +6,21 @@
 /*   By: skimura <skimura@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/01 18:55:11 by skimura           #+#    #+#             */
-/*   Updated: 2025/06/02 20:11:52 by skimura          ###   ########.fr       */
+/*   Updated: 2025/10/27 15:13:52 by skimura          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../include/libft.h"
 
 size_t	ft_strspn(const char *s, const char *accept)
 {
-	size_t	j;
 	size_t	i;
-	int		f;
 
+	if (!s || !accept)
+		return (0);
 	i = 0;
-	while (s[i])
-	{
-		j = 0;
-		f = 0;
-		while (accept[j])
-		{
-			if (s[i] == accept[j])
-				f = 1;
-			j++;
-		}
-		if (f == 0)
-			return (i);
+	while (s[i] && ft_strchr(accept, s[i]))
 		i++;
-	}
 	return (i);
 }
 
